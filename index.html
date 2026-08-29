@@ -1,63 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AVpro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #050914;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<title>AVpro | Digital Growth Agency</title>
 
-    .box {
-      padding: 40px;
-    }
+<meta name="description" content="AVpro helps local businesses grow with professional websites, AI-powered creatives, social media, Google Business Profile management, video advertising and local marketing.">
 
-    h1 {
-      font-size: 60px;
-      margin: 0 0 15px;
-    }
+<style>
 
-    span {
-      color: #1597ff;
-    }
+/* =========================================================
+   AVPRO — GLOBAL
+========================================================= */
 
-    p {
-      color: #aaa;
-      font-size: 18px;
-    }
+:root{
+  --black:#050505;
+  --dark:#09090b;
+  --dark2:#101014;
+  --card:#111116;
+  --card2:#17171d;
 
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 24px;
-      background: #1597ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-  </style>
-</head>
+  --white:#ffffff;
+  --text:#eeeeef;
+  --muted:#9a9aa3;
+  --muted2:#686871;
 
-<body>
+  --blue:#4f8cff;
+  --cyan:#20d9ff;
+  --purple:#8b5cf6;
+  --pink:#ec4899;
+  --green:#25d366;
 
-  <div class="box">
-    <h1>AV<span>pro</span></h1>
-    <p>AI-Powered Digital Marketing Agency</p>
-    <a href="mailto:contact.avproofficial@gmail.com">
-      Contact AVpro
-    </a>
-  </div>
+  --line:rgba(255,255,255,.09);
 
-</body>
-</html>
+  --gradient:linear-gradient(
+    135deg,
+    #8b5cf6 0%,
+    #4f8cff 48%,
+    #20d9ff 100%
+  );
+
+  --max:1180px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(139,92,246,.12),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(32,217,255,.07),
+      transparent 25%
+    ),
+    var(--black);
+
+  color:var(--text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.015) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.015) 1px,
+      transparent 1px
+    );
+
+  background-size:60px 60px;
+
+  mask-image:linear-gradient(
+    to bottom,
+    black,
+    transparent 80%
+  );
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(var(--max),92%);
+  margin:auto;
+}
+
+section{
+  padding:110px 0;
+}
+
+img{
+  max-width:100%;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
