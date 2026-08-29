@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,9 +6,32 @@
 
 <title>AVpro — Digital Marketing Agency</title>
 
-<meta name="description" content="AVpro helps local businesses grow with AI-powered marketing, websites, Google Business Profile optimization, social media, promotional videos and local advertising.">
+<meta name="description" content="AVpro is an AI-powered digital marketing agency helping local businesses grow with websites, creative content, WhatsApp promotions, local advertising and Google Business Profile optimization.">
+
+<meta name="theme-color" content="#07111f">
 
 <style>
+
+/* =========================
+   AVPRO — GLOBAL
+========================= */
+
+:root{
+    --bg:#050b14;
+    --bg2:#091525;
+    --card:rgba(255,255,255,.055);
+    --card2:rgba(255,255,255,.08);
+    --text:#f5f7fb;
+    --muted:#9ba8ba;
+    --blue:#1597ff;
+    --cyan:#27d9ff;
+    --green:#22c77a;
+    --gold:#ffc928;
+    --border:rgba(255,255,255,.11);
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+    --radius:24px;
+}
+
 *{
     margin:0;
     padding:0;
@@ -21,113 +43,153 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#050912;
-    color:#fff;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 80% 10%,rgba(21,151,255,.14),transparent 28%),
+        radial-gradient(circle at 10% 40%,rgba(39,217,255,.08),transparent 25%),
+        var(--bg);
+    color:var(--text);
     line-height:1.6;
     overflow-x:hidden;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
 }
 
 .container{
-    width:90%;
-    max-width:1150px;
+    width:min(1120px,92%);
     margin:auto;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar{
-    position:sticky;
+    position:fixed;
     top:0;
-    z-index:1000;
-    background:rgba(5,9,18,.88);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    left:0;
+    right:0;
+    z-index:999;
+    background:rgba(5,11,20,.72);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .nav-inner{
-    min-height:75px;
+    min-height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:20px;
 }
 
-.brand{
+.logo{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:25px;
-    font-weight:800;
+    font-weight:900;
+    font-size:24px;
+    letter-spacing:-1px;
 }
 
-.brand span{
-    color:#159cff;
+.logo-mark{
+    width:44px;
+    height:44px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    font-weight:1000;
+    color:white;
+    background:
+        linear-gradient(135deg,#ffffff 0 35%,#128cff 36% 72%,#18d9ff 73%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    border:1px solid rgba(39,217,255,.3);
+    background-color:#07111f;
 }
 
-.logo-small{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    object-fit:cover;
+.logo span{
+    color:#1597ff;
 }
 
 .nav-links{
     display:flex;
+    align-items:center;
     gap:25px;
+}
+
+.nav-links a{
+    color:#b9c4d2;
     font-size:14px;
-    color:#cbd5e1;
+    font-weight:700;
+    transition:.25s;
 }
 
 .nav-links a:hover{
-    color:#19a5ff;
-}
-
-.nav-button{
-    background:#159cff;
-    padding:11px 18px;
-    border-radius:30px;
-    font-weight:bold;
     color:white;
 }
 
-/* HERO */
+.nav-cta{
+    padding:11px 17px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#1597ff,#24cfff);
+    color:#03101d!important;
+    font-weight:900!important;
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+    min-height:100vh;
+    padding:150px 0 80px;
+    display:flex;
+    align-items:center;
     position:relative;
-    padding:100px 0 90px;
-    text-align:center;
-    overflow:hidden;
 }
 
-.hero:before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:#087fff;
-    opacity:.13;
-    filter:blur(120px);
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:1px solid rgba(39,217,255,.22);
+    background:rgba(21,151,255,.08);
+    color:#8edfff;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:22px;
+}
+
+.badge-dot{
+    width:8px;
+    height:8px;
     border-radius:50%;
-    top:-150px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-}
-
-.hero-logo{
-    width:115px;
-    height:115px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:25px;
-    box-shadow                    
+    background:#21d787;
+    box-shadow:0 0                
